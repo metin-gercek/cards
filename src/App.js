@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import Details from "./components/Details";
+import CardList from "./components/CardList";
+
+const url = "https://jsonplaceholder.typicode.com/users";
 
 function App() {
+
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(url).then((response) =>
+        response.json()
+      );
+      // console.log(response);
+      setUsers(response);
+    };
+    fetchData();
+  }, []);
+
+  const handleClick = (user, showDetails) => {
+    if (showDetails) {
+      setUser(user);
+    } else {
+      setUser(null);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    {user == null ? (
+      <CardList users={users} handleClick={handleClick} />
+    ) : (
+      <Details user={user} handleClick={handleClick} />
+    )}
+    
+  </div>
   );
 }
 
