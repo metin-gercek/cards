@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshots
+
+![main](https://user-images.githubusercontent.com/90307193/177381830-246699f1-20da-40a3-8e4a-0e5545f740b6.png)
+![details](https://user-images.githubusercontent.com/90307193/177381851-abc561c0-ca2b-4efd-8436-24d01c6b19ad.png)
+
+## Data Source
+Jsonplaceholder API [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+
 ## Available Scripts
 
 In the project directory, you can run:
