@@ -8,7 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![details](https://user-images.githubusercontent.com/90307193/177381851-abc561c0-ca2b-4efd-8436-24d01c6b19ad.png)
 
 ## Data Source
-Jsonplaceholder API [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+[Jsonplaceholder API](https://jsonplaceholder.typicode.com/users)
+
+## Live Demo
+Live Demo deployed to [Netlify](https://cards-metingercek.netlify.app/)
 
 ## Available Scripts
 
